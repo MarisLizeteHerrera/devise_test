@@ -40,6 +40,7 @@ group :development, :test do
   gem "pry"
   gem "devise"
   gem "materialize-sass"
+  gem 'faker'
 end
 
 group :development do
