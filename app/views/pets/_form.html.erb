@@ -1,0 +1,14 @@
+<h1><%= @pet.id ? 'Edit Pet' : 'Create Pet' %></h1>
+<hr />
+<%= form_for @pet do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true, autofocus: true %>
+
+  <%= f.label :animal %>
+  <%= f.text_field :animal, required: true%>
+
+  <%= f.label :color %>
+  <%= f.text_field :color, required: true%>
+  <%= f.submit %>
+<% end %>
+<%= link_to 'Back To Pets', pets_path %>

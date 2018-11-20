@@ -11,6 +11,7 @@ class PetsController < ApplicationController
 
   def new
     @pet = Pet.new
+    render partial: "form"
   end
   
   def create
@@ -23,7 +24,7 @@ class PetsController < ApplicationController
   end
 
   def edit
-
+    render partial: "form"
   end
 
   def update
