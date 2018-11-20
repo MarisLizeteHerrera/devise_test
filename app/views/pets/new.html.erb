@@ -1,0 +1,21 @@
+<h1>Pets#new</h1>
+<h1>Add Pet</h1>
+<%= form_with(model: @pet, local: true) do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, placeholder: "Name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :animal %>
+    <%= f.text_field :animal %>
+  </div>
+
+  <div class="field">
+    <%= f.label :color %>
+    <%= f.text_field :color %>
+  </div>
+  
+  <%= f.submit %>
+<% end %>
+<p>Find me in app/views/pets/new.html.erb</p>

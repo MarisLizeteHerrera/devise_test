@@ -1,0 +1,13 @@
+<h1>Pets#index</h1>
+<%= button_to "Log Out", destroy_user_session_path, method: :delete %>
+<h2>Welcome <%= current_user.name %></h2>
+<hr />
+<%= link_to  "Add New Pet", new_pet_path %>
+<p>Find me in app/views/pets/index.html.erb</p>
+<h3>Your Pets<h3>
+
+  <% @pets.each do |pet|%>
+<ul>
+    <li><%= link_to pet.name, pet_path(pet) %></li>
+</ul>
+  <% end %>
